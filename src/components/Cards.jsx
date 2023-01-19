@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Cards = ({ productos }) => {
@@ -5,7 +6,11 @@ const Cards = ({ productos }) => {
     <div>
       <div className="row row-cols-1 row-cols-md-4 g-4">
         {productos?.map((producto) => (
-          <div className="col" key={producto.id}>
+          <Link
+            href={`/detalleProducto?id=${producto.id}`}
+            className="col"
+            key={producto.id}
+          >
             <div className="card h-100">
               <img
                 src={producto.image}
@@ -17,7 +22,7 @@ const Cards = ({ productos }) => {
                 <p className="card-text">{producto.description}</p>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

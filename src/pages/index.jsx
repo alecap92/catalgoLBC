@@ -4,10 +4,12 @@ import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import Sidebar from "@/components/Sidebar";
 import ProductList from "@/components/ProductList";
-
-const inter = Inter({ subsets: ["latin"] });
+import { useRouter } from "next/router";
 
 export default function Home() {
+  const router = useRouter();
+  const { subCategory } = router.query;
+
   return (
     <>
       <Head>
@@ -39,7 +41,7 @@ export default function Home() {
             </div>
             <p>Alimentos y Bebidas - Cafe</p>
             <hr style={{ border: "2px solid white", opacity: 1 }} />
-            <ProductList />
+            <ProductList subCategory={subCategory} />
           </div>
         </div>
       </section>
