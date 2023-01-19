@@ -67,7 +67,9 @@ const DetalleProductoPage = () => {
             <tbody>
               {listadoEmpresas?.map((item, index) => (
                 <tr key={index}>
-                  <td>{item.logo}</td>
+                  <td>
+                    <img src={item.logo} width={100} alt="" />
+                  </td>
                   <td>{item.name}</td>
                 </tr>
               ))}
