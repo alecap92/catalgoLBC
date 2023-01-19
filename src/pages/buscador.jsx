@@ -39,7 +39,7 @@ export default function Home() {
                 placeholder="Buscar producto"
               />
             </div>
-            <p>CATEGORIA: {subCategory.toUpperCase()}</p>
+            <p>CATEGORIA: {subCategory?.toUpperCase()}</p>
             <hr style={{ border: "2px solid white", opacity: 1 }} />
             <ProductList subCategory={subCategory} />
           </div>
