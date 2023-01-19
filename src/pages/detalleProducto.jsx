@@ -6,7 +6,7 @@ import DetalleProducto from "@/components/DetalleProducto";
 import { ListadoDeProductos } from "@/data/productList";
 import { companyList } from "@/data/companyList";
 
-const detalleProducto = () => {
+const DetalleProductoPage = () => {
   const router = useRouter();
   const [products, setProducts] = useState([]);
   const [listadoEmpresas, setListadoEmpresas] = useState();
@@ -79,4 +79,4 @@ const detalleProducto = () => {
   );
 };
 
-export default detalleProducto;
+export default DetalleProductoPage;
