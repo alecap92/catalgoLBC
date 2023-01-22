@@ -55,10 +55,10 @@ export const ListadoDeProductos = [
   },
   {
     id: "6",
-    name: "Roasted coffee 125 gr",
+    name: "Roasted coffee 60 gr",
     caracteristicas: ["una", "dos"],
     description:
-      "Available varieties: Caturra, Colombia, Tabi, Geche, Castillo Rosario, Maragoji, Arabigo",
+      "Available varieties: Arabiga; available presentations: sachets and 50 grams pack",
     image: "/img/cafe/cafeVerde.png",
     tags: "Coffee",
     category: "Food and beverage",
@@ -66,6 +66,17 @@ export const ListadoDeProductos = [
   },
   {
     id: "7",
+    name: "Roasted coffee 125 gr",
+    caracteristicas: ["una", "dos"],
+    description:
+      "Available varieties: Caturra, Colombia, Tabi, Geche, Castillo Rosario, Maragoji, Arabigo, wush wush, castillo",
+    image: "/img/cafe/cafeVerde.png",
+    tags: "Coffee",
+    category: "Food and beverage",
+    subCategory: "coffee",
+  },
+  {
+    id: "8",
     name: "Roasted coffee 150 gr",
     caracteristicas: ["una", "dos"],
     description: "Available varieties: Geisha, Bourbon, Tabi",
@@ -75,7 +86,17 @@ export const ListadoDeProductos = [
     subCategory: "coffee",
   },
   {
-    id: "8",
+    id: "9",
+    name: "Roasted coffee 200 gr",
+    caracteristicas: ["una", "dos"],
+    description: "Available varieties: Arabiga",
+    image: "/img/cafe/cafeTostado.png",
+    tags: "Coffee",
+    category: "Food and beverage",
+    subCategory: "coffee",
+  },
+  {
+    id: "10",
     name: "Roasted coffee 250 gr",
     caracteristicas: ["una", "dos"],
     description:
@@ -86,18 +107,39 @@ export const ListadoDeProductos = [
     subCategory: "coffee",
   },
   {
-    id: "9",
-    name: "Roasted coffee 350 gr",
+    id: "11",
+    name: "Roasted coffee 300 gr",
     caracteristicas: ["una", "dos"],
     description:
-      "Available varieties: Caturra, Geisha, Bourbon, Tabi, Castilla",
+      "Available varieties: De la casa mix (Castillo/caturra), castillo el granado, castillo ambato, renacer (castillo/colombia), albar (Caturra)",
     image: "/img/cafe/cafeTostado.png",
     tags: "Coffee",
     category: "Food and beverage",
     subCategory: "coffee",
   },
   {
-    id: "10",
+    id: "12",
+    name: "Roasted coffee 350 gr",
+    caracteristicas: ["una", "dos"],
+    description:
+      "Available varieties: Caturra, Geisha, Bourbon, Tabi, Castilla, Arabiga, Pink bourbon, organic",
+    image: "/img/cafe/cafeTostado.png",
+    tags: "Coffee",
+    category: "Food and beverage",
+    subCategory: "coffee",
+  },
+  {
+    id: "13",
+    name: "Roasted coffee 400 gr",
+    caracteristicas: ["una", "dos"],
+    description: "Available varieties: Castillo, Caturra, Colombia",
+    image: "/img/cafe/cafeTostado.png",
+    tags: "Coffee",
+    category: "Food and beverage",
+    subCategory: "coffee",
+  },
+  {
+    id: "14",
     name: "Roasted coffee 450 gr",
     caracteristicas: ["una", "dos"],
     description:
@@ -108,7 +150,7 @@ export const ListadoDeProductos = [
     subCategory: "coffee",
   },
   {
-    id: "11",
+    id: "15",
     name: "Roasted coffee 500 gr",
     caracteristicas: ["una", "dos"],
     description:
@@ -119,7 +161,7 @@ export const ListadoDeProductos = [
     subCategory: "coffee",
   },
   {
-    id: "12",
+    id: "16",
     name: "Roasted coffee 800 gr",
     caracteristicas: ["una", "dos"],
     description: "Available varieties: Caturra, Geisha, Bourbon, Tabi",
@@ -129,7 +171,7 @@ export const ListadoDeProductos = [
     subCategory: "coffee",
   },
   {
-    id: "13",
+    id: "17",
     name: "Roasted coffee 1000 gr",
     caracteristicas: ["una", "dos"],
     description:
@@ -140,7 +182,7 @@ export const ListadoDeProductos = [
     subCategory: "coffee",
   },
   {
-    id: "14",
+    id: "18",
     name: "Roasted coffee 2500 gr",
     caracteristicas: ["una", "dos"],
     description:
@@ -151,7 +193,7 @@ export const ListadoDeProductos = [
     subCategory: "coffee",
   },
   {
-    id: "15",
+    id: "19",
     name: "Roasted coffee 5000 gr",
     caracteristicas: ["una", "dos"],
     description:
@@ -162,7 +204,7 @@ export const ListadoDeProductos = [
     subCategory: "coffee",
   },
   {
-    id: "16",
+    id: "20",
     name: "Complementary coffee products 269 mL",
     caracteristicas: ["una", "dos"],
     description: "Cold brew",
@@ -172,7 +214,17 @@ export const ListadoDeProductos = [
     subCategory: "coffee",
   },
   {
-    id: "17",
+    id: "21",
+    name: "Coffee extract",
+    caracteristicas: ["una", "dos"],
+    description: "Coffee extract",
+    image: "/img/cafe/coldBrew.png",
+    tags: "Coffee",
+    category: "Food and beverage",
+    subCategory: "coffee",
+  },
+  {
+    id: "22",
     name: "Banano",
     caracteristicas: ["una", "dos"],
     description: "Banano",
