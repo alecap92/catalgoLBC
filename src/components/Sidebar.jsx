@@ -26,12 +26,33 @@ const Sidebar = () => {
                 Coffee
               </Link>
             </li>
+            <li style={{ color: "#B9A46D" }}>
+              <Link style={{ color: "white" }} href="/buscador?subCategory=oil">
+                Oil
+              </Link>
+            </li>
+            <li style={{ color: "#B9A46D" }}>
+              <Link
+                style={{ color: "white" }}
+                href="/buscador?subCategory=flour"
+              >
+                Flour
+              </Link>
+            </li>
+            <li style={{ color: "#B9A46D" }}>
+              <Link
+                style={{ color: "white" }}
+                href="/buscador?subCategory=cocoa"
+              >
+                Cocoa
+              </Link>
+            </li>
             <li>
               <Link
                 href="/buscador?subCategory=vegetables"
                 style={{ color: "white" }}
               >
-                Fresh Vegetables
+                Fruits & Vegetables
               </Link>
             </li>
 
