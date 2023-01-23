@@ -79,6 +79,14 @@ const Sidebar = () => {
               Horse Saddles
             </Link>
           </li>
+          <li style={{ color: "#B9A46D" }}>
+            <Link
+              style={{ color: "white" }}
+              href="/buscador?subCategory=flavoredSodas"
+            >
+              Flavored Sodas
+            </Link>
+          </li>
         </ul>
       </ul>
       <ul>
@@ -98,6 +106,32 @@ const Sidebar = () => {
               href="/buscador?subCategory=WomenShapewear"
             >
               Womens Shapewear
+            </Link>
+          </li>
+          <li style={{ color: "#B9A46D" }}>
+            <Link style={{ color: "white" }} href="/buscador?subCategory=hats">
+              Hats
+            </Link>
+          </li>
+        </ul>
+      </ul>
+      <ul>
+        <li>Flowers</li>
+        <ul>
+          <li style={{ color: "#B9A46D" }}>
+            <Link
+              style={{ color: "white" }}
+              href="/buscador?subCategory=flowers"
+            >
+              Exotic Flowers
+            </Link>
+          </li>
+          <li style={{ color: "#B9A46D" }}>
+            <Link
+              style={{ color: "white" }}
+              href="/buscador?subCategory=RosesFlowers"
+            >
+              RosesFlowers
             </Link>
           </li>
         </ul>
