@@ -76,7 +76,7 @@ const Sidebar = () => {
               style={{ color: "white" }}
               href="/buscador?subCategory=WomenShapewear"
             >
-              Women's Shapewear
+              Womens Shapewear
             </Link>
           </li>
         </ul>
