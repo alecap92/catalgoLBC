@@ -28,7 +28,7 @@ const Index = () => {
       >
         <img src="/img/logo/logo.png" alt="" width={300} />
         <div>
-          <h3>Encuentra productos latinoamericanos</h3>
+          <h3>Find products from latinamerica</h3>
           <div
             style={{
               display: "flex",
@@ -55,7 +55,7 @@ const Index = () => {
                 color: "white",
               }}
             >
-              Buscar
+              Search
             </button>
           </div>
         </div>
@@ -69,7 +69,7 @@ const Index = () => {
           flexDirection: "column",
         }}
       >
-        <h3>Encuentra tu producto</h3>
+        <h3 className="my-5">BEST SELLING PRODUCTS</h3>
         <div
           style={{
             display: "grid",
@@ -78,20 +78,20 @@ const Index = () => {
           }}
         >
           <Link href="/buscador?subCategory=coffee">
-            <img src="/img/Inicio/5.png" alt="" width={300} />
+            <img src="/img/cafe/COFFEE.png" alt="" width={300} />
           </Link>
-          <div>
-            <img src="/img/Inicio/1.png" alt="" width={300} />
-          </div>
-          <div>
-            <img src="/img/Inicio/2.png" alt="" width={300} />
-          </div>
-          <div>
+          <Link href="/buscador?subCategory=VEGETABLES">
+            <img src="/img/cafe/VEGETABLES.png" alt="" width={300} />
+          </Link>
+          <Link href="/buscador?subCategory=SWIMSUITS">
+            <img src="/img/cafe/SWIMSUITS.png" alt="" width={300} />
+          </Link>
+          {/* <div>
             <img src="/img/Inicio/3.png" alt="" width={300} />
           </div>
           <div>
             <img src="/img/Inicio/4.png" alt="" width={300} />
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

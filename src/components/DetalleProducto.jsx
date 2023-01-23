@@ -14,7 +14,7 @@ const DetalleProducto = ({ producto }) => {
           style={{ margin: "20px 0px", cursor: "pointer" }}
           onClick={() => router.back()}
         />
-        <h1 className="ms-3">Coffee</h1>
+        <h1 className="ms-3">{producto.name?.toUpperCase()}</h1>
       </div>
       {producto ? (
         <div className="row">
@@ -36,8 +36,11 @@ const DetalleProducto = ({ producto }) => {
               <label htmlFor="">Size of Packaging (Kg)</label>
               <select name="" id="" className="form-control">
                 <option value="">- Select Option-</option>
-                <option value="">2</option>
-                <option value="">5</option>
+                <option value="">2 Kg</option>
+                <option value="">5 Kg</option>
+                <option value="">20 Kg</option>
+                <option value="">40 Kg</option>
+                <option value="">70 Kg</option>
               </select>
             </div>
             <div className="my-3">

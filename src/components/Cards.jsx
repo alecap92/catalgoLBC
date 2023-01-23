@@ -19,7 +19,10 @@ const Cards = ({ productos }) => {
               />
               <div className="card-body text-dark">
                 <h5 className="card-title">{producto.name}</h5>
-                <p className="card-text">{producto.description}</p>
+                <p className="card-text">
+                  {producto.description.split(/\s+/).slice(0, 20).join(" ") +
+                    "..."}
+                </p>
               </div>
             </div>
           </Link>
