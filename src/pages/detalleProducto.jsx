@@ -53,28 +53,6 @@ const DetalleProductoPage = () => {
         </div>
         <div className="col-md-10">
           <DetalleProducto producto={products} />
-          <h3>Empresas Registradas</h3>
-          <table
-            style={{ width: "50%" }}
-            className="table table-striped table-dark text-white"
-          >
-            <thead>
-              <tr>
-                <th>Logo</th>
-                <th>Company Name</th>
-              </tr>
-            </thead>
-            <tbody>
-              {listadoEmpresas?.map((item, index) => (
-                <tr key={index}>
-                  <td>
-                    <img src={item.logo} width={100} alt="" />
-                  </td>
-                  <td>{item.name}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
         </div>
       </div>
     </div>

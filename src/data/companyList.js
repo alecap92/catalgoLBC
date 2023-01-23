@@ -3,6 +3,8 @@ export const companyList = [
     name: "Colo Coffee",
     logo: "/img/cafe/logos/6.png",
     productos: [8, 9, 16],
+    region: "Antioquia",
+    country: "Colombia",
   },
   {
     name: "Cafe Soca",
@@ -13,6 +15,8 @@ export const companyList = [
     name: "Tres Rayas Coffee",
     logo: "/img/cafe/logos/1.png",
     productos: [1, 2, 5],
+    region: "Antioquia",
+    country: "Colombia",
   },
   {
     name: "Chiquita Farm",

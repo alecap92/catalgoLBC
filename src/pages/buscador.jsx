@@ -26,7 +26,7 @@ export default function Home() {
       </Head>
       <section>
         <div className="row">
-          <div className="col-md-2">
+          <div className="col-md-2 col-sm-0">
             <Sidebar />
           </div>
           <div className="col-md-9 my-5">
