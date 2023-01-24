@@ -7,7 +7,7 @@ const Sidebar = () => {
       style={{
         background: "#3E3D3D",
         position: "fixed",
-        height: "100%",
+        height: "100vh",
         padding: "20px 20px",
       }}
     >
@@ -42,9 +42,17 @@ const Sidebar = () => {
             <li style={{ color: "#B9A46D" }}>
               <Link
                 style={{ color: "white" }}
+                href="/buscador?subCategory=meat"
+              >
+                Meat
+              </Link>
+            </li>
+            <li style={{ color: "#B9A46D" }}>
+              <Link
+                style={{ color: "white" }}
                 href="/buscador?subCategory=cocoa"
               >
-                Cocoa
+                Chocolate & Cocoa
               </Link>
             </li>
             <li>
@@ -55,7 +63,14 @@ const Sidebar = () => {
                 Fruits & Vegetables
               </Link>
             </li>
-
+            <li>
+              <Link
+                href="/buscador?subCategory=panela"
+                style={{ color: "white" }}
+              >
+                Panela
+              </Link>
+            </li>
             <li style={{ color: "#B9A46D" }}>
               <Link
                 style={{ color: "white" }}
@@ -64,19 +79,55 @@ const Sidebar = () => {
                 Snacks
               </Link>
             </li>
+            <li style={{ color: "#B9A46D" }}>
+              <Link
+                style={{ color: "white" }}
+                href="/buscador?subCategory=sauces"
+              >
+                Sauces
+              </Link>
+            </li>
+            <li style={{ color: "#B9A46D" }}>
+              <Link
+                style={{ color: "white" }}
+                href="/buscador?subCategory=grains"
+              >
+                Grains
+              </Link>
+            </li>
           </ul>
         </li>
       </ul>
-
+      <ul>
+        <li>Flowers</li>
+        <ul>
+          <li style={{ color: "#B9A46D" }}>
+            <Link
+              style={{ color: "white" }}
+              href="/buscador?subCategory=flowers"
+            >
+              Exotic Flowers
+            </Link>
+          </li>
+          <li style={{ color: "#B9A46D" }}>
+            <Link
+              style={{ color: "white" }}
+              href="/buscador?subCategory=RosesFlowers"
+            >
+              Rose Flowers
+            </Link>
+          </li>
+        </ul>
+      </ul>
       <ul>
         <li>Others</li>
         <ul>
           <li style={{ color: "#B9A46D" }}>
             <Link
               style={{ color: "white" }}
-              href="/buscador?subCategory=horseSaddles"
+              href="/buscador?subCategory=horses"
             >
-              Horse Saddles
+              Horses
             </Link>
           </li>
           <li style={{ color: "#B9A46D" }}>
@@ -85,6 +136,19 @@ const Sidebar = () => {
               href="/buscador?subCategory=flavoredSodas"
             >
               Flavored Sodas
+            </Link>
+          </li>
+          <li style={{ color: "#B9A46D" }}>
+            <Link
+              style={{ color: "white" }}
+              href="/buscador?subCategory=beautyProducts"
+            >
+              Beauty products
+            </Link>
+          </li>
+          <li style={{ color: "#B9A46D" }}>
+            <Link style={{ color: "white" }} href="/buscador?subCategory=coal">
+              Coal
             </Link>
           </li>
         </ul>
@@ -113,25 +177,20 @@ const Sidebar = () => {
               Hats
             </Link>
           </li>
-        </ul>
-      </ul>
-      <ul>
-        <li>Flowers</li>
-        <ul>
           <li style={{ color: "#B9A46D" }}>
             <Link
               style={{ color: "white" }}
-              href="/buscador?subCategory=flowers"
+              href="/buscador?subCategory=towels"
             >
-              Exotic Flowers
+              Towels
             </Link>
           </li>
           <li style={{ color: "#B9A46D" }}>
             <Link
               style={{ color: "white" }}
-              href="/buscador?subCategory=RosesFlowers"
+              href="/buscador?subCategory=shirts"
             >
-              RosesFlowers
+              Shirts
             </Link>
           </li>
         </ul>
