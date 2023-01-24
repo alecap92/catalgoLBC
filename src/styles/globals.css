@@ -1,8 +1,8 @@
 body {
-  background-color: #272727;
-  color: white;
+  background-color: #272727 !important;
+  color: white !important;
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }

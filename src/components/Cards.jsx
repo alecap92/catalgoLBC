@@ -20,8 +20,10 @@ const Cards = ({ productos }) => {
               <div className="card-body text-dark">
                 <h5 className="card-title">{producto.name}</h5>
                 <p className="card-text">
-                  {producto.description.split(/\s+/).slice(0, 20).join(" ") +
-                    "..."}
+                  {producto.description.length > 10
+                    ? producto.description.split(/\s+/).slice(0, 20).join(" ") +
+                      "..."
+                    : producto.description}
                 </p>
               </div>
             </div>
