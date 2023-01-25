@@ -1,14 +1,18 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "@next/font/google";
-import styles from "@/styles/Home.module.css";
 import Sidebar from "@/components/Sidebar";
 import ProductList from "@/components/ProductList";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import { getProductsBySearchQuery } from "@/utils/products";
 
 export default function Home() {
-  const router = useRouter();
-  const { subCategory } = router.query;
+  const router = useRouter()
+  const { q: searchQuery } = router.query
+  const [showedProducts, setShowedProducts] = useState([])
+
+  useEffect(() => {
+    setShowedProducts(getProductsBySearchQuery(searchQuery))
+  }, [searchQuery])
 
   return (
     <>
@@ -33,9 +37,9 @@ export default function Home() {
               placeholder="Search Product"
             />
           </div>
-          <p>CATEGORY: {subCategory?.toUpperCase()}</p>
+          <p>CATEGORY: { searchQuery?.toUpperCase()}</p>
           <hr style={{ border: "2px solid white", opacity: 1 }} />
-          <ProductList subCategory={subCategory} />
+          <ProductList products={ showedProducts } />
         </div>
       </div>
     </>

@@ -21,20 +21,20 @@ const Sidebar = () => {
             <li style={{ color: "#B9A46D" }}>
               <Link
                 style={{ color: "white" }}
-                href="/buscador?subCategory=coffee"
+                href="/productos/coffee"
               >
                 Coffee
               </Link>
             </li>
             <li style={{ color: "#B9A46D" }}>
-              <Link style={{ color: "white" }} href="/buscador?subCategory=oil">
+              <Link style={{ color: "white" }} href="/productos/oil">
                 Oil
               </Link>
             </li>
             <li style={{ color: "#B9A46D" }}>
               <Link
                 style={{ color: "white" }}
-                href="/buscador?subCategory=flour"
+                href="/productos/flour"
               >
                 Flour
               </Link>
@@ -42,7 +42,7 @@ const Sidebar = () => {
             <li style={{ color: "#B9A46D" }}>
               <Link
                 style={{ color: "white" }}
-                href="/buscador?subCategory=meat"
+                href="/productos/meat"
               >
                 Meat
               </Link>
@@ -50,14 +50,14 @@ const Sidebar = () => {
             <li style={{ color: "#B9A46D" }}>
               <Link
                 style={{ color: "white" }}
-                href="/buscador?subCategory=cocoa"
+                href="/productos/cocoa"
               >
                 Chocolate & Cocoa
               </Link>
             </li>
             <li>
               <Link
-                href="/buscador?subCategory=vegetables"
+                href="/productos/vegetables"
                 style={{ color: "white" }}
               >
                 Fruits & Vegetables
@@ -65,7 +65,7 @@ const Sidebar = () => {
             </li>
             <li>
               <Link
-                href="/buscador?subCategory=panela"
+                href="/productos/panela"
                 style={{ color: "white" }}
               >
                 Panela
@@ -74,7 +74,7 @@ const Sidebar = () => {
             <li style={{ color: "#B9A46D" }}>
               <Link
                 style={{ color: "white" }}
-                href="/buscador?subCategory=snacks"
+                href="/productos/snacks"
               >
                 Snacks
               </Link>
@@ -82,7 +82,7 @@ const Sidebar = () => {
             <li style={{ color: "#B9A46D" }}>
               <Link
                 style={{ color: "white" }}
-                href="/buscador?subCategory=sauces"
+                href="/productos/sauces"
               >
                 Sauces
               </Link>
@@ -90,7 +90,7 @@ const Sidebar = () => {
             <li style={{ color: "#B9A46D" }}>
               <Link
                 style={{ color: "white" }}
-                href="/buscador?subCategory=grains"
+                href="/productos/grains"
               >
                 Grains
               </Link>
@@ -104,7 +104,7 @@ const Sidebar = () => {
           <li style={{ color: "#B9A46D" }}>
             <Link
               style={{ color: "white" }}
-              href="/buscador?subCategory=flowers"
+              href="/productos/flowers"
             >
               Exotic Flowers
             </Link>
@@ -112,7 +112,7 @@ const Sidebar = () => {
           <li style={{ color: "#B9A46D" }}>
             <Link
               style={{ color: "white" }}
-              href="/buscador?subCategory=RosesFlowers"
+              href="/productos/rosesflowers"
             >
               Rose Flowers
             </Link>
@@ -125,7 +125,7 @@ const Sidebar = () => {
           <li style={{ color: "#B9A46D" }}>
             <Link
               style={{ color: "white" }}
-              href="/buscador?subCategory=horses"
+              href="/productos/horses"
             >
               Horses
             </Link>
@@ -133,7 +133,7 @@ const Sidebar = () => {
           <li style={{ color: "#B9A46D" }}>
             <Link
               style={{ color: "white" }}
-              href="/buscador?subCategory=flavoredSodas"
+              href="/productos/flavoredsodas"
             >
               Flavored Sodas
             </Link>
@@ -141,13 +141,13 @@ const Sidebar = () => {
           <li style={{ color: "#B9A46D" }}>
             <Link
               style={{ color: "white" }}
-              href="/buscador?subCategory=beautyProducts"
+              href="/productos/beautyproducts"
             >
               Beauty products
             </Link>
           </li>
           <li style={{ color: "#B9A46D" }}>
-            <Link style={{ color: "white" }} href="/buscador?subCategory=coal">
+            <Link style={{ color: "white" }} href="/productos/coal">
               Coal
             </Link>
           </li>
@@ -159,7 +159,7 @@ const Sidebar = () => {
           <li style={{ color: "#B9A46D" }}>
             <Link
               style={{ color: "white" }}
-              href="/buscador?subCategory=Swimsuits"
+              href="/productos/swimsuits"
             >
               Swimsuits
             </Link>
@@ -167,20 +167,20 @@ const Sidebar = () => {
           <li style={{ color: "#B9A46D" }}>
             <Link
               style={{ color: "white" }}
-              href="/buscador?subCategory=WomenShapewear"
+              href="/productos/womenshapewear"
             >
               Womens Shapewear
             </Link>
           </li>
           <li style={{ color: "#B9A46D" }}>
-            <Link style={{ color: "white" }} href="/buscador?subCategory=hats">
+            <Link style={{ color: "white" }} href="/productos/hats">
               Hats
             </Link>
           </li>
           <li style={{ color: "#B9A46D" }}>
             <Link
               style={{ color: "white" }}
-              href="/buscador?subCategory=towels"
+              href="/productos/towels"
             >
               Towels
             </Link>
@@ -188,7 +188,7 @@ const Sidebar = () => {
           <li style={{ color: "#B9A46D" }}>
             <Link
               style={{ color: "white" }}
-              href="/buscador?subCategory=shirts"
+              href="/productos/shirts"
             >
               Shirts
             </Link>

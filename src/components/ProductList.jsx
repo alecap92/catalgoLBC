@@ -1,25 +1,15 @@
-import { ListadoDeProductos } from "@/data/productList.js";
-import React, { useEffect, useState } from "react";
-import Cards from "./Cards";
+import Card from "./Card";
 
-const ProductList = ({ subCategory }) => {
-  const [listadoPro, setListadoPro] = useState([]);
-
-  const getProductos = () => {
-    const listadoFiltrado = ListadoDeProductos.filter((item) => {
-      return item.subCategory === subCategory;
-    });
-
-    setListadoPro(listadoFiltrado);
-  };
-
-  useEffect(() => {
-    getProductos();
-  }, [subCategory]);
-
+const ProductList = ({ products }) => {
   return (
     <div className="m-3">
-      <Cards productos={listadoPro} subCategory={subCategory} />
+      <div>
+        <div className="row row-cols-1 row-cols-md-4 g-4">
+          {products?.map((product) => (
+            <Card product={ product } key={ product.id } />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

@@ -1,8 +1,19 @@
+import { useCallback, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import React from "react";
+import { useRouter } from "next/router";
 
 const Index = () => {
+  const [searchedProduct, setSearchedProduct] = useState("")
+  const router = useRouter()
+
+  const handleSearch = useCallback((e, query = "") => {
+    e.preventDefault()
+    if(!query) return
+
+    router.push(`/buscador?q=${query}`)
+  }, [router])
+
   return (
     <div>
       <Head>
@@ -23,34 +34,40 @@ const Index = () => {
         <img src="/img/logo/logo.png" alt="" width={300} />
         <div>
           <h3>Find products from latinamerica</h3>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignContent: "center",
-            }}
-          >
-            <input
+          <div>
+            <form 
+              onSubmit={ e => handleSearch(e, searchedProduct) }
               style={{
-                width: "80%",
-                marginRight: "20px",
-                borderRadius: "10px",
-              }}
-              type="text"
-              name=""
-              id=""
-            />
-            <button
-              style={{
-                background: "#B9A46D",
-                padding: "7px 15px",
-                border: "none",
-                borderRadius: "10px",
-                color: "white",
+                display: "flex",
+                justifyContent: "center",
+                alignContent: "center",
               }}
             >
-              Search
-            </button>
+              <input
+                style={{
+                  width: "80%",
+                  marginRight: "20px",
+                  borderRadius: "10px",
+                }}
+                type="text"
+                name=""
+                id=""
+                value={ searchedProduct }
+                onChange={ (e) => setSearchedProduct(e.target.value) }
+              />
+              <button
+                style={{
+                  background: "#B9A46D",
+                  padding: "7px 15px",
+                  border: "none",
+                  borderRadius: "10px",
+                  color: "white",
+                }}
+                type="submit"
+              >
+                Search
+              </button>
+            </form>
           </div>
         </div>
       </section>
@@ -71,13 +88,13 @@ const Index = () => {
             gap: "40px",
           }}
         >
-          <Link href="/buscador?subCategory=coffee">
+          <Link href="/productos/coffee">
             <img src="/img/cafe/COFFEE.png" alt="" width={300} />
           </Link>
-          <Link href="/buscador?subCategory=VEGETABLES">
+          <Link href="/productos/vegetables">
             <img src="/img/cafe/VEGETABLES.png" alt="" width={300} />
           </Link>
-          <Link href="/buscador?subCategory=SWIMSUITS">
+          <Link href="/productos/swimsuits">
             <img src="/img/cafe/SWIMSUITS.png" alt="" width={300} />
           </Link>
           {/* <div>

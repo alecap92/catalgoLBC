@@ -300,7 +300,7 @@ export const ListadoDeProductos = [
     sizeOfPackage: ["100", "200", "300"],
   },
   {
-    id: "20",
+    id: "20-1",
     name: "Coffee 500gms",
     caracteristicas: ["una", "dos"],
     description: "Barra de chocolate",
@@ -314,7 +314,7 @@ export const ListadoDeProductos = [
     sizeOfPackage: ["100", "200", "300"],
   },
   {
-    id: "20",
+    id: "20-2",
     name: "Coffee Sticks",
     caracteristicas: ["una", "dos"],
     description: "Barra de chocolate",
