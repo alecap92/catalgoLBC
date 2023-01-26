@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 
 import { FaArrowCircleLeft } from "react-icons/fa";
 import { useRouter } from "next/router";
+import { getCompaniesWithStock } from "@/utils/products";
 
 const DetalleProducto = ({ producto }) => {
   const [logged, setLogged] = useState(false);
+  const [companiesWithStock, setCompaniesWithStock] = useState([])
   const router = useRouter();
 
   useEffect(() => {
@@ -13,6 +15,12 @@ const DetalleProducto = ({ producto }) => {
       setLogged(true);
     }
   }, []);
+
+  useEffect(() => {
+    if(logged) {
+      setCompaniesWithStock(getCompaniesWithStock(producto?.id))
+    }
+  }, [logged, producto?.id])
 
   return (
     <div style={{ margin: "50px 30px" }}>
@@ -56,11 +64,15 @@ const DetalleProducto = ({ producto }) => {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Prueba</td>
-                <td>3112887686</td>
-                <td>www.manillasdecontrol.com</td>
-              </tr>
+              {
+                companiesWithStock.map(company => (
+                  <tr key={ company?.name }>
+                    <td>{ company?.name }</td>
+                    <td>{ company?.phone }</td>
+                    <td>{ company?.web }</td>
+                  </tr>
+                ))
+              }
             </tbody>
           </table>
         </div>

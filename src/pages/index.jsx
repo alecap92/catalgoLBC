@@ -1,19 +1,8 @@
-import { useCallback, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { Searchbar } from "@/components/Searchbar";
 
 const Index = () => {
-  const [searchedProduct, setSearchedProduct] = useState("")
-  const router = useRouter()
-
-  const handleSearch = useCallback((e, query = "") => {
-    e.preventDefault()
-    if(!query) return
-
-    router.push(`/buscador?q=${query}`)
-  }, [router])
-
   return (
     <div>
       <Head>
@@ -35,39 +24,7 @@ const Index = () => {
         <div>
           <h3>Find products from latinamerica</h3>
           <div>
-            <form 
-              onSubmit={ e => handleSearch(e, searchedProduct) }
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignContent: "center",
-              }}
-            >
-              <input
-                style={{
-                  width: "80%",
-                  marginRight: "20px",
-                  borderRadius: "10px",
-                }}
-                type="text"
-                name=""
-                id=""
-                value={ searchedProduct }
-                onChange={ (e) => setSearchedProduct(e.target.value) }
-              />
-              <button
-                style={{
-                  background: "#B9A46D",
-                  padding: "7px 15px",
-                  border: "none",
-                  borderRadius: "10px",
-                  color: "white",
-                }}
-                type="submit"
-              >
-                Search
-              </button>
-            </form>
+            <Searchbar />
           </div>
         </div>
       </section>

@@ -4,6 +4,7 @@ import ProductList from "@/components/ProductList";
 import { useRouter } from "next/router";
 import { ListadoDeProductos } from "@/data/productList.js";
 import { PRODUCT_CATEGORIES } from "@/constants/products";
+import { Searchbar } from "@/components/Searchbar";
 
 export default function Products({ products, category }) {
     return (
@@ -21,13 +22,7 @@ export default function Products({ products, category }) {
             </div>
             <div className="col-md-8 my-5">
             <div style={{ margin: "40px 0px", maxWidth: "500px" }}>
-                <input
-                type="text"
-                name=""
-                className="form-control"
-                id=""
-                placeholder="Search Product"
-                />
+                <Searchbar />
             </div>
             <p>CATEGORY: { category?.toUpperCase() }</p>
             <hr style={{ border: "2px solid white", opacity: 1 }} />

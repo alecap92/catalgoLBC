@@ -4,6 +4,7 @@ import ProductList from "@/components/ProductList";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { getProductsBySearchQuery } from "@/utils/products";
+import { Searchbar } from "@/components/Searchbar";
 
 export default function Home() {
   const router = useRouter()
@@ -29,13 +30,7 @@ export default function Home() {
         </div>
         <div className="col-md-8 my-5">
           <div style={{ margin: "40px 0px", maxWidth: "500px" }}>
-            <input
-              type="text"
-              name=""
-              className="form-control"
-              id=""
-              placeholder="Search Product"
-            />
+            <Searchbar />
           </div>
           <p>CATEGORY: { searchQuery?.toUpperCase()}</p>
           <hr style={{ border: "2px solid white", opacity: 1 }} />

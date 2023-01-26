@@ -1,3 +1,4 @@
+import { companyList } from "@/data/companyList"
 import { ListadoDeProductos } from "@/data/productList"
 
 export const getProductsBySearchQuery = (searchQuery = "") => {
@@ -10,4 +11,12 @@ export const getProductsBySearchQuery = (searchQuery = "") => {
         || product?.subCategory?.toLocaleLowerCase()?.includes(searchQuery)
         || product?.description?.toLocaleLowerCase()?.includes(searchQuery)
     })
+}
+
+export const getCompaniesWithStock = (productId = "") => {
+    const idNumber = Number(productId)
+
+    if(isNaN(idNumber)) return []
+
+    return companyList.filter(company => Array.isArray(company?.productos) && company.productos.includes(idNumber))
 }
