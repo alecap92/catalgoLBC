@@ -243,8 +243,7 @@ export const ListadoDeProductos = [
     id: "17",
     name: "Chocolate bar with fruits",
     caracteristicas: ["una", "dos"],
-    description:
-      "A chocolatey, fruity and tangy taste that will delight the finest of gourmets.",
+    description: "A chocolatey, fruity and tangy taste that will delight the finest of gourmets.",
     image: "/img/cocoa/barraFrutas.png",
     tags: "cocoa",
     category: "cocoa",
@@ -1021,7 +1020,7 @@ export const ListadoDeProductos = [
     name: "Vacumm Beef",
     caracteristicas: ["una", "dos"],
     description: "Vacumm Beef",
-    image: "public/img/meat/vaccumMeat.png",
+    image: "/img/meat/vaccumMeat.png",
     tags: "Vacumm Beef",
     category: "meat",
     subCategory: "meat",

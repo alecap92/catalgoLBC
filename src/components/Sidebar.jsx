@@ -19,10 +19,7 @@ const Sidebar = () => {
           Food cupboard
           <ul>
             <li style={{ color: "#B9A46D" }}>
-              <Link
-                style={{ color: "white" }}
-                href="/productos/coffee"
-              >
+              <Link style={{ color: "white" }} href="/productos/coffee">
                 Coffee
               </Link>
             </li>
@@ -32,66 +29,42 @@ const Sidebar = () => {
               </Link>
             </li>
             <li style={{ color: "#B9A46D" }}>
-              <Link
-                style={{ color: "white" }}
-                href="/productos/flour"
-              >
+              <Link style={{ color: "white" }} href="/productos/flour">
                 Flour
               </Link>
             </li>
             <li style={{ color: "#B9A46D" }}>
-              <Link
-                style={{ color: "white" }}
-                href="/productos/meat"
-              >
+              <Link style={{ color: "white" }} href="/productos/meat">
                 Meat
               </Link>
             </li>
             <li style={{ color: "#B9A46D" }}>
-              <Link
-                style={{ color: "white" }}
-                href="/productos/cocoa"
-              >
+              <Link style={{ color: "white" }} href="/productos/cocoa">
                 Chocolate & Cocoa
               </Link>
             </li>
             <li>
-              <Link
-                href="/productos/vegetables"
-                style={{ color: "white" }}
-              >
+              <Link href="/productos/vegetables" style={{ color: "white" }}>
                 Fruits & Vegetables
               </Link>
             </li>
             <li>
-              <Link
-                href="/productos/panela"
-                style={{ color: "white" }}
-              >
+              <Link href="/productos/panela" style={{ color: "white" }}>
                 Panela
               </Link>
             </li>
             <li style={{ color: "#B9A46D" }}>
-              <Link
-                style={{ color: "white" }}
-                href="/productos/snacks"
-              >
+              <Link style={{ color: "white" }} href="/productos/snacks">
                 Snacks
               </Link>
             </li>
             <li style={{ color: "#B9A46D" }}>
-              <Link
-                style={{ color: "white" }}
-                href="/productos/sauces"
-              >
+              <Link style={{ color: "white" }} href="/productos/sauces">
                 Sauces
               </Link>
             </li>
             <li style={{ color: "#B9A46D" }}>
-              <Link
-                style={{ color: "white" }}
-                href="/productos/grains"
-              >
+              <Link style={{ color: "white" }} href="/productos/grains">
                 Grains
               </Link>
             </li>
@@ -102,18 +75,12 @@ const Sidebar = () => {
         <li>Flowers</li>
         <ul>
           <li style={{ color: "#B9A46D" }}>
-            <Link
-              style={{ color: "white" }}
-              href="/productos/flowers"
-            >
+            <Link style={{ color: "white" }} href="/productos/flowers">
               Exotic Flowers
             </Link>
           </li>
           <li style={{ color: "#B9A46D" }}>
-            <Link
-              style={{ color: "white" }}
-              href="/productos/rosesflowers"
-            >
+            <Link style={{ color: "white" }} href="/productos/rosesflowers">
               Rose Flowers
             </Link>
           </li>
@@ -123,26 +90,17 @@ const Sidebar = () => {
         <li>Others</li>
         <ul>
           <li style={{ color: "#B9A46D" }}>
-            <Link
-              style={{ color: "white" }}
-              href="/productos/horses"
-            >
+            <Link style={{ color: "white" }} href="/productos/horses">
               Horses
             </Link>
           </li>
           <li style={{ color: "#B9A46D" }}>
-            <Link
-              style={{ color: "white" }}
-              href="/productos/flavoredsodas"
-            >
+            <Link style={{ color: "white" }} href="/productos/flavoredsodas">
               Flavored Sodas
             </Link>
           </li>
           <li style={{ color: "#B9A46D" }}>
-            <Link
-              style={{ color: "white" }}
-              href="/productos/beautyproducts"
-            >
+            <Link style={{ color: "white" }} href="/productos/beautyproducts">
               Beauty products
             </Link>
           </li>
@@ -157,18 +115,12 @@ const Sidebar = () => {
         <li>Textiles</li>
         <ul>
           <li style={{ color: "#B9A46D" }}>
-            <Link
-              style={{ color: "white" }}
-              href="/productos/swimsuits"
-            >
+            <Link style={{ color: "white" }} href="/productos/swimsuits">
               Swimsuits
             </Link>
           </li>
           <li style={{ color: "#B9A46D" }}>
-            <Link
-              style={{ color: "white" }}
-              href="/productos/womenshapewear"
-            >
+            <Link style={{ color: "white" }} href="/productos/womenshapewear">
               Womens Shapewear
             </Link>
           </li>
@@ -178,18 +130,12 @@ const Sidebar = () => {
             </Link>
           </li>
           <li style={{ color: "#B9A46D" }}>
-            <Link
-              style={{ color: "white" }}
-              href="/productos/towels"
-            >
+            <Link style={{ color: "white" }} href="/productos/towels">
               Towels
             </Link>
           </li>
           <li style={{ color: "#B9A46D" }}>
-            <Link
-              style={{ color: "white" }}
-              href="/productos/shirts"
-            >
+            <Link style={{ color: "white" }} href="/productos/shirts">
               Shirts
             </Link>
           </li>
