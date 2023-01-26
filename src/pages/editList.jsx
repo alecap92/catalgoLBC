@@ -25,8 +25,8 @@ const Edit = () => {
               </tr>
             </thead>
             <tbody>
-              {ListadoDeProductos.map((item) => (
-                <tr>
+              {ListadoDeProductos.map((item, index) => (
+                <tr key={index}>
                   <td>
                     <textarea name="" id="" style={{ background: "none", color: "white", border: "none" }} defaultValue={item.id}></textarea>
                   </td>
