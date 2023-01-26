@@ -1,7 +1,10 @@
 import { ListadoDeProductos } from "@/data/productList";
+import { companyList } from "@/data/companyList";
+
 import React from "react";
 
 const Edit = () => {
+  console.log(JSON.stringify(companyList));
   return (
     <div>
       <h1 className="my-5">Listado de productos</h1>
@@ -11,17 +14,17 @@ const Edit = () => {
             <thead>
               <tr>
                 <th>id</th>
-                <th> name</th>
-                <th> caracteristicas</th>
-                <th> description</th>
-                <th> image</th>
-                <th> tags</th>
-                <th> category</th>
-                <th> subCategory</th>
-                <th> region</th>
-                <th> countryOfOrigin</th>
-                <th> type</th>
-                <th> sizeOfPackage</th>
+                <th>name</th>
+                <th>caracteristicas</th>
+                <th>description</th>
+                <th>image</th>
+                <th>tags</th>
+                <th>category</th>
+                <th>subCategory</th>
+                <th>region</th>
+                <th>countryOfOrigin</th>
+                <th>type</th>
+                <th>sizeOfPackage</th>
               </tr>
             </thead>
             <tbody>
