@@ -63,7 +63,7 @@
 
     .layoutContentContainer {
         max-height: initial;
-        overflow-y: auto;
+        overflow-y: initial;
     }
 
     .burgerMenu {
