@@ -42,7 +42,18 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const products = ListadoDeProductos.filter((product) => product.subCategory?.toLocaleLowerCase() === params.category);
+    let products = []
+
+    try {
+        const response = await fetch("https://www.ccacback.com/api/v1/products")
+        const data = await response.json()
+        
+        if(Array.isArray(data?.products)) {
+            products = data.products.filter((product) => product.subCategory?.toLocaleLowerCase() === params.category)
+        }
+    } catch (error) {
+        console.log(error)
+    }
 
     return {
         props: {

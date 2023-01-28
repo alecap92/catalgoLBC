@@ -38,7 +38,9 @@ const DetalleProducto = ({ producto }) => {
 
   useEffect(() => {
     if (logged) {
-      setCompaniesWithStock(getCompaniesWithStock(producto?.id));
+      getCompaniesWithStock(producto?.id)
+        .then(companies => setCompaniesWithStock(companies))
+        .catch(() => setCompaniesWithStock([]))
     }
   }, [logged, producto?.id]);
 
@@ -76,7 +78,7 @@ const DetalleProducto = ({ producto }) => {
         "cargando"
       )}
 
-      {logged && (
+      {logged && companiesWithStock.length > 0 && (
         <div className="table-responsive my-5">
           <table className="table table-dark">
             <thead>
