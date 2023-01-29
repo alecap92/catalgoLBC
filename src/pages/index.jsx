@@ -1,8 +1,10 @@
 import Head from "next/head";
 import Link from "next/link";
 import { Searchbar } from "@/components/Searchbar";
+import styles from "@/styles/pages/home.module.css"
+import Image from "next/image";
 
-const Index = () => {
+const HomePage = () => {
   return (
     <div>
       <Head>
@@ -20,7 +22,7 @@ const Index = () => {
           alignItems: "center",
         }}
       >
-        <img src="/img/logo/logo.png" alt="" width={300} />
+        <Image src="/img/logo/logo.png" alt="" width={300} height={ 249 }/>
         <div>
           <h3>Find products from latinamerica</h3>
           <div>
@@ -28,31 +30,20 @@ const Index = () => {
           </div>
         </div>
       </section>
+
       <section
-        style={{
-          marginTop: "100px",
-          display: "flex",
-          justifyItems: "center",
-          alignItems: "center",
-          flexDirection: "column",
-        }}
+        className={ styles.recommendedProducts }
       >
         <h3 className="my-5">BEST SELLING PRODUCTS</h3>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gap: "40px",
-          }}
-        >
+        <div className={ styles.productsImages }>
           <Link href="/productos/coffee">
-            <img src="/img/cafe/COFFEE.png" alt="" width={300} />
+            <Image src="/img/cafe/COFFEE.png" alt="" width={300} height={200}/>
           </Link>
           <Link href="/productos/vegetables">
-            <img src="/img/cafe/VEGETABLES.png" alt="" width={300} />
+            <Image src="/img/cafe/VEGETABLES.png" alt="" width={300} height={200}/>
           </Link>
           <Link href="/productos/swimsuits">
-            <img src="/img/cafe/SWIMSUITS.png" alt="" width={300} />
+            <Image src="/img/cafe/SWIMSUITS.png" alt="" width={300} height={200} />
           </Link>
           {/* <div>
             <img src="/img/Inicio/3.png" alt="" width={300} />
@@ -66,4 +57,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default HomePage;
