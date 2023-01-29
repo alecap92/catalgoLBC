@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { getCompaniesWithStock } from "@/utils/products";
 import emailjs from "@emailjs/browser";
 
-const DetalleProducto = ({ producto }) => {
+const DetalleProducto = ({ product }) => {
   const [logged, setLogged] = useState(false);
   const [companiesWithStock, setCompaniesWithStock] = useState([]);
   // const [form, setForm] = useState([]);
@@ -13,6 +13,8 @@ const DetalleProducto = ({ producto }) => {
 
   const form = useRef();
   const router = useRouter();
+
+  console.log(product)
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -38,25 +40,25 @@ const DetalleProducto = ({ producto }) => {
 
   useEffect(() => {
     if (logged) {
-      getCompaniesWithStock(producto?.id)
+      getCompaniesWithStock(product?.id)
         .then(companies => setCompaniesWithStock(companies))
         .catch(() => setCompaniesWithStock([]))
     }
-  }, [logged, producto?.id]);
+  }, [logged, product?.id]);
 
   return (
     <div style={{ margin: "50px 30px" }}>
       <div style={{ display: "flex", alignItems: "center" }}>
         <FaArrowCircleLeft size={34} style={{ margin: "20px 0px", cursor: "pointer" }} onClick={() => router.back()} />
-        <h1 className="ms-3">{producto?.name?.toUpperCase()}</h1>
+        <h1 className="ms-3">{product?.name?.toUpperCase()}</h1>
       </div>
-      {producto ? (
+      {product ? (
         <div className="row">
           <div className="col-md-6">
-            <img src={producto.image} alt="" />
+            <img src={product.image} alt="" />
           </div>
           <div className="col-md-5">
-            <p>{producto.description}</p>
+            <p>{product.description}</p>
             <button
               type="button"
               style={{
@@ -110,7 +112,7 @@ const DetalleProducto = ({ producto }) => {
             <div className="modal-body text-dark">
               <form action="" onSubmit={submitHandler} ref={form}>
                 <div className="row g-3">
-                  <input type="text" name="productName" id="productName" value={producto?.name} hidden />
+                  <input type="text" name="productName" id="productName" value={product?.name} hidden />
                   <div className="col-md-6">
                     <label htmlFor="inputEmail4" className="form-label">
                       Company Name

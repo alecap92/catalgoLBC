@@ -6,36 +6,22 @@ import DetalleProducto from "@/components/DetalleProducto";
 import { ListadoDeProductos } from "@/data/productList";
 import { companyList } from "@/data/companyList";
 import ProductsLayout from "@/layouts/ProductsLayout";
+import { getProductById } from "@/utils/products";
 
 const DetalleProductoPage = () => {
   const router = useRouter();
-  const [products, setProducts] = useState([]);
-  const [listadoEmpresas, setListadoEmpresas] = useState();
+  const [product, setProduct] = useState(undefined);
 
   const { id } = router.query;
 
-  const GetProduct = () => {
-    const productos = ListadoDeProductos.filter((item) => {
-      return item.id === id;
-    });
-
-    setProducts(productos[0]);
-  };
-
-  const getCompanyList = () => {
-    const listado = companyList.filter((item) => {
-      return item.productos.includes(parseInt(id));
-    });
-    setListadoEmpresas(listado);
-  };
-
   useEffect(() => {
-    GetProduct();
-    getCompanyList();
+    getProductById(id)
+      .then(product => setProduct(product))
+      .catch(err => console.log(err))
   }, [id]);
 
   return (
-    <DetalleProducto producto={products} />
+    <DetalleProducto product={product} />
   );
 };
 
