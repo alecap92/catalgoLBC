@@ -1,15 +1,11 @@
 import Link from "next/link";
 import React from "react";
+import styles from "@/styles/components/sidebar.module.css"
 
 const Sidebar = () => {
   return (
     <div
-      style={{
-        background: "#3E3D3D",
-        position: "fixed",
-        height: "100vh",
-        padding: "20px 20px",
-      }}
+      className={ styles.sidebar }
     >
       <Link href="/">
         <img src="/img/logo/logo.png" width={200} alt="" />

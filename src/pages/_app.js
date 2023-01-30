@@ -2,6 +2,9 @@ import Script from "next/script";
 import "../styles/globals.css";
 
 export default function App({ Component, pageProps }) {
+
+  const getLayout = Component.getLayout || ((page) => page)
+
   return (
     <>
       <Script
@@ -9,7 +12,7 @@ export default function App({ Component, pageProps }) {
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"
       ></Script>
-      <Component {...pageProps} />;
+      { getLayout(<Component {...pageProps} />) }
     </>
   );
 }

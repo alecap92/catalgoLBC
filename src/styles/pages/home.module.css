@@ -1,0 +1,25 @@
+.recommendedProducts {
+    margin-top: 100px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.productsImages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+@media screen and (max-width: 1200px) {
+    .productsImages {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .productsImages {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
