@@ -1,7 +1,48 @@
 .sidebar {
     background-color: #3E3D3D;
     min-height: 100vh;
-    padding: 20px;
+    padding: 20px 40px;
+}
+
+.sidebarCategories {
+    padding: 0;
+    margin: 0;
+}
+
+.sidebarCategory {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.sidebarCategory p {
+    margin-bottom: 7px;
+    color: var(--main-brown);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.sidebarCategory ul {
+    list-style: none;
+    color: white;
+}
+
+.sidebarCategory ul li {
+    margin: 4px 0;
+}
+
+.sidebarCategory ul a {
+    color: white;
+    transition: all ease 0.3s;
+}
+
+.sidebarCategory ul a:hover {
+    color: var(--main-brown);
+}
+
+.sidebarCategory ul a.active {
+    color: var(--main-brown);
+    font-weight: bold;
+    text-decoration: underline !important;
 }
 
 @media screen and (max-width: 900px) {

@@ -1,9 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { FaArrowCircleLeft } from "react-icons/fa";
 import { useRouter } from "next/router";
 import { getCompaniesWithStock } from "@/utils/products";
 import emailjs from "@emailjs/browser";
+
+import styles from "@/styles/components/detalleProducto.module.css";
 
 const DetalleProducto = ({ product }) => {
   const [logged, setLogged] = useState(false);
@@ -13,8 +15,6 @@ const DetalleProducto = ({ product }) => {
 
   const form = useRef();
   const router = useRouter();
-
-  console.log(product)
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -53,11 +53,10 @@ const DetalleProducto = ({ product }) => {
         <h1 className="ms-3">{product?.name?.toUpperCase()}</h1>
       </div>
       {product ? (
-        <div className="row">
-          <div className="col-md-6">
-            <img src={product.image} alt="" />
-          </div>
-          <div className="col-md-5">
+        <div className={ styles.informacionProducto }>
+          <img src={product.image} alt="" width="100%" style={{ maxWidth: "700px" }}/>
+
+          <div className={ styles.informacionProductoPayload }>
             <p>{product.description}</p>
             <button
               type="button"

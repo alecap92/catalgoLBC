@@ -34,7 +34,7 @@ export const getProductById = async (productId = "") => {
     let product = null
 
     try {
-        const response = await fetch("https://www.ccacback.com/api/v1/products/63d28c7eafd9a16bdc60ba83")
+        const response = await fetch(`https://www.ccacback.com/api/v1/products/${ productId }`)
         const data = await response.json()
 
         if(data?.ok && Array.isArray(data?.busqueda)) {
