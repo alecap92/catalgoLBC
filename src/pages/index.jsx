@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { Searchbar } from "@/components/Searchbar";
-import styles from "@/styles/pages/home.module.css"
+import styles from "@/styles/pages/home.module.css";
 import Image from "next/image";
 
 const HomePage = () => {
@@ -22,28 +22,36 @@ const HomePage = () => {
           alignItems: "center",
         }}
       >
-        <Image src="/img/logo/logo.png" alt="" width={300} height={ 249 }/>
+        <Image src="/img/logo/logo.png" alt="" width={300} height={249} />
         <div>
-          <h3>Find products from latinamerica</h3>
+          <h3>Find products from Latin America</h3>
           <div>
             <Searchbar />
           </div>
         </div>
       </section>
 
-      <section
-        className={ styles.recommendedProducts }
-      >
+      <section className={styles.recommendedProducts}>
         <h3 className="my-5">BEST SELLING PRODUCTS</h3>
-        <div className={ styles.productsImages }>
+        <div className={styles.productsImages}>
           <Link href="/productos/coffee">
-            <Image src="/img/cafe/COFFEE.png" alt="" width={300} height={200}/>
+            <Image src="/img/cafe/COFFEE.png" alt="" width={300} height={200} />
           </Link>
           <Link href="/productos/vegetables">
-            <Image src="/img/cafe/VEGETABLES.png" alt="" width={300} height={200}/>
+            <Image
+              src="/img/cafe/VEGETABLES.png"
+              alt=""
+              width={300}
+              height={200}
+            />
           </Link>
           <Link href="/productos/swimsuits">
-            <Image src="/img/cafe/SWIMSUITS.png" alt="" width={300} height={200} />
+            <Image
+              src="/img/cafe/SWIMSUITS.png"
+              alt=""
+              width={300}
+              height={200}
+            />
           </Link>
           {/* <div>
             <img src="/img/Inicio/3.png" alt="" width={300} />
