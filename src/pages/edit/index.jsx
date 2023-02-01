@@ -4,6 +4,7 @@ import { getCompaniesWithStock } from "@/utils/products";
 import { useRouter } from "next/router";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { SIDEBAR_CATEGORIES } from "@/constants/sidebar";
 
 const Listado = () => {
   const [listadoDeProductos, setListadoDeProductos] = useState([]);
@@ -35,17 +36,27 @@ const Listado = () => {
   };
 
   const deleteHandler = (id) => {
-    axios
-      .delete(`https://www.ccacback.com/api/v1/products/${id}`)
-      .then((res) => {
-        Swal.fire("Exito!", "Ha sido eliminado exitosamente!", "success");
-        console.log(res.data);
-        getProducts();
-      })
-      .catch((err) => {
-        console.log(err);
-        Swal.fire("Ups!", "Ha ocurrido un problema!", "error");
-      });
+    Swal.fire({
+      title: "Estas seguro?",
+      text: "No podras deshacer esto!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Si, Eliminar!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axios
+          .delete(`https://www.ccacback.com/api/v1/products/${id}`)
+          .then((res) => {
+            Swal.fire("Deleted!", "Your file has been deleted.", "success");
+            getProducts();
+          })
+          .catch((err) => {
+            Swal.fire("Ups!", "Ha ocurrido un problema!", "error");
+          });
+      }
+    });
   };
 
   const searchHandler = (e) => {
@@ -53,7 +64,9 @@ const Listado = () => {
     if (e.target.value.length >= 3) {
       console.log(e.target.value);
 
-      const productosFiltrados = listadoDeProductos.filter((producto) => producto.name.toLowerCase().includes(e.target.value.toLowerCase()));
+      const productosFiltrados = listadoDeProductos.filter((producto) =>
+        producto.name.toLowerCase().includes(e.target.value.toLowerCase())
+      );
 
       setListadoDeProductos(productosFiltrados);
       console.log(newProduct);
@@ -76,11 +89,23 @@ const Listado = () => {
         <div className="container">
           <div className="row">
             <div className="col">
-              <button type="button" className="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <button
+                type="button"
+                className="btn btn-success"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
                 Nuevo Producto
               </button>
               <div className="d-flex my-5">
-                <input type="text" name="search" id="search" placeholder="Buscar..." className="form-control" onChange={(e) => searchHandler(e)} />
+                <input
+                  type="text"
+                  name="search"
+                  id="search"
+                  placeholder="Buscar..."
+                  className="form-control"
+                  onChange={(e) => searchHandler(e)}
+                />
               </div>
               <table className="table table-striped table-dark table-hover">
                 <thead>
@@ -94,19 +119,23 @@ const Listado = () => {
                   {listadoDeProductos.map((item, index) => (
                     <tr key={index}>
                       <td>
-                        <img src={"https://catalgo.vercel.app" + item.image} alt="" style={{ width: "100px" }} />
+                        <img
+                          src={"https://catalgo.vercel.app" + item.image}
+                          alt=""
+                          style={{ width: "100px" }}
+                        />
                       </td>
                       <td>
                         <h5> {item.name}</h5>
                       </td>
                       <td onClick={() => router.push("/edit/" + item.id)}>
                         <div className="m-auto">
-                          <FaRegEdit size={25} />
+                          <FaRegEdit size={25} style={{ cursor: "pointer" }} />
                         </div>
                       </td>
                       <td onClick={() => deleteHandler(item.id)}>
                         <div className="m-auto">
-                          <FaTrash size={25} />
+                          <FaTrash size={25} style={{ cursor: "pointer" }} />
                         </div>
                       </td>
                     </tr>
@@ -118,14 +147,25 @@ const Listado = () => {
         </div>
       </div>
 
-      <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div
+        className="modal fade"
+        id="exampleModal"
+        tabIndex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
         <div className="modal-dialog  modal-lg">
           <div className="modal-content">
             <div className="modal-header">
               <h1 className="modal-title fs-5 text-dark" id="exampleModalLabel">
                 Crear Nuevo Producto
               </h1>
-              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
             </div>
             <form action="" onSubmit={submitHandler}>
               <div className="modal-body text-dark">
@@ -140,7 +180,10 @@ const Listado = () => {
                       aria-label="name"
                       name="name"
                       onChange={(e) => {
-                        setNewProduct({ ...newProduct, [e.target.name]: e.target.value });
+                        setNewProduct({
+                          ...newProduct,
+                          [e.target.name]: e.target.value,
+                        });
                       }}
                     />
                   </div>
@@ -154,7 +197,10 @@ const Listado = () => {
                       aria-label="image"
                       name="image"
                       onChange={(e) => {
-                        setNewProduct({ ...newProduct, [e.target.name]: e.target.value });
+                        setNewProduct({
+                          ...newProduct,
+                          [e.target.name]: e.target.value,
+                        });
                       }}
                     />
                   </div>
@@ -167,29 +213,23 @@ const Listado = () => {
                       id="category"
                       className="form-control"
                       onChange={(e) => {
-                        setNewProduct({ ...newProduct, [e.target.name]: e.target.value });
+                        setNewProduct({
+                          ...newProduct,
+                          [e.target.name]: e.target.value,
+                        });
                       }}
                     >
                       <option hidden>- Seleccione -</option>
-                      <option value="Coffee">Coffee</option>
+                      {SIDEBAR_CATEGORIES.map((item) =>
+                        item.subCategories.map((item, index) => (
+                          <option key={index} value={item.urlTag}>
+                            {item.label}
+                          </option>
+                        ))
+                      )}
                     </select>
                   </div>
-                  <div className="col-md-6">
-                    <label htmlFor="subCategory" className="form-label">
-                      Sub Categoria
-                    </label>
-                    <select
-                      name="subCategory"
-                      id="subCategory"
-                      className="form-control"
-                      onChange={(e) => {
-                        setNewProduct({ ...newProduct, [e.target.name]: e.target.value });
-                      }}
-                    >
-                      <option hidden>- Seleccione - </option>
-                      <option value="Brew">Brew</option>
-                    </select>
-                  </div>
+
                   <div className="col-md-6">
                     <label htmlFor="region" className="form-label">
                       Origen (Departamento)
@@ -200,7 +240,10 @@ const Listado = () => {
                       aria-label="region"
                       name="region"
                       onChange={(e) => {
-                        setNewProduct({ ...newProduct, [e.target.name]: e.target.value });
+                        setNewProduct({
+                          ...newProduct,
+                          [e.target.name]: e.target.value,
+                        });
                       }}
                     />
                   </div>
@@ -214,7 +257,10 @@ const Listado = () => {
                       aria-label="countryOfOrigin"
                       name="countryOfOrigin"
                       onChange={(e) => {
-                        setNewProduct({ ...newProduct, [e.target.name]: e.target.value });
+                        setNewProduct({
+                          ...newProduct,
+                          [e.target.name]: e.target.value,
+                        });
                       }}
                     />
                   </div>
@@ -229,14 +275,21 @@ const Listado = () => {
                       rows="4"
                       className="form-control"
                       onChange={(e) => {
-                        setNewProduct({ ...newProduct, [e.target.name]: e.target.value });
+                        setNewProduct({
+                          ...newProduct,
+                          [e.target.name]: e.target.value,
+                        });
                       }}
                     ></textarea>
                   </div>
                 </div>
               </div>
               <div className="modal-footer">
-                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">
+                <button
+                  type="button"
+                  className="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
                   Cerrar
                 </button>
                 <button type="submit" className="btn btn-primary">

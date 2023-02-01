@@ -37,7 +37,7 @@ const HomePage = () => {
           <Link href="/productos/coffee">
             <Image src="/img/cafe/COFFEE.png" alt="" width={300} height={200} />
           </Link>
-          <Link href="/productos/vegetables">
+          <Link href="/productos/freshFruits">
             <Image
               src="/img/cafe/VEGETABLES.png"
               alt=""
