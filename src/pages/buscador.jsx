@@ -13,7 +13,9 @@ export default function Buscador() {
   const [showedProducts, setShowedProducts] = useState([])
 
   useEffect(() => {
-    setShowedProducts(getProductsBySearchQuery(searchQuery))
+    getProductsBySearchQuery(searchQuery)
+      .then(products => setShowedProducts(products))
+      .catch(() => setShowedProducts([]))
   }, [searchQuery])
 
   return (
