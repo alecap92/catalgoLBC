@@ -26,7 +26,7 @@ export const Searchbar = () => {
     >
       <input
         style={{
-          width: "80%",
+          width: "100%",
           marginRight: "20px",
         }}
         type="text"
@@ -34,7 +34,7 @@ export const Searchbar = () => {
         id=""
         value={searchedProduct}
         onChange={(e) => setSearchedProduct(e.target.value)}
-        placeholder="Search Products"
+        placeholder="What type of Product are you looking for?"
         className="form-control"
       />
       <button
