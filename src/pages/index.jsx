@@ -4,9 +4,29 @@ import { Searchbar } from "@/components/Searchbar";
 import styles from "@/styles/pages/home.module.css";
 import Image from "next/image";
 import HomeCarousell from "@/components/carrousell/HomeCarousell";
-import { FaGlobeAmericas, FaHandshake, FaRegBuilding } from "react-icons/fa";
+import { FaEnvelope, FaGlobe, FaGlobeAmericas, FaHandshake, FaMap, FaRegBuilding, FaWhatsapp } from "react-icons/fa";
+import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/router";
+import emailjs from "@emailjs/browser";
 
 const HomePage = () => {
+  const [isSent, setIsSent] = useState();
+  const form = useRef();
+  const router = useRouter();
+  const submitHandler = (e) => {
+    e.preventDefault();
+    console.log(form);
+    emailjs.sendForm("service_uvmnxpc", "template_9jg7ddo", form.current, "ib7WmF5Q6SMcb0lP_").then(
+      (result) => {
+        setIsSent(true);
+        e.target.reset();
+      },
+      (error) => {
+        console.log(error);
+        setIsSent(false);
+      }
+    );
+  };
   return (
     <div style={{ paddingBottom: "100px" }}>
       <Head>
@@ -15,7 +35,6 @@ const HomePage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <section
         className="mb-5"
         style={{
@@ -31,39 +50,167 @@ const HomePage = () => {
         </div>
       </section>
 
+      <section className="container text-center">
+        <h3 style={{ color: "grey" }}>Our Partners</h3>
+        <div className="row g-1 d-flex justify-content-center">
+          <div className="col-2">
+            <img src="/img/partners/1.png" alt="" className="img-fluid" />
+          </div>
+          <div className="col-2">
+            <img src="/img/partners/2.png" alt="" className="img-fluid" />
+          </div>
+          <div className="col-2">
+            <img src="/img/partners/3.png" alt="" className="img-fluid" />
+          </div>
+          <div className="col-2">
+            <img src="/img/partners/4.png" alt="" className="img-fluid" />
+          </div>
+          <div className="col-2">
+            <img src="/img/partners/5.png" alt="" className="img-fluid" />
+          </div>
+        </div>
+      </section>
+
       <section className="container text-center my-5">
         <div className="row">
           <div className="col-md-4">
             <FaRegBuilding size={60} />
             <h3 style={{ color: "#BC9B48", marginTop: "15px" }}>Who we are?</h3>
             <p style={{ marginBottom: "0px" }}>
-              LatinAmerica Business Center was born as an initiative of the Arab Colombian Chamber of Commerce in alliance with
+              We connect people, connect businesses. We provide clients in the Arab market with the confidence to carry out transactions with Latin
+              American companies.
             </p>
-            <a href="https://labc.ae" style={{ margin: "0px", padding: "0px", color: "#BC9B48", cursor: "pointer" }}>
+            <a href="https://labc.ae/buyers" style={{ margin: "0px", padding: "0px", color: "#BC9B48", cursor: "pointer" }}>
               Visit Us
             </a>
           </div>
           <div className="col-md-4">
             <FaGlobeAmericas size={60} />
             <h3 style={{ color: "#BC9B48", marginTop: "15px" }}>Voice of Thousands</h3>
-            <p>LatinAmerica Business Center was born as an initiative of the Arab Colombian Chamber of Commerce in alliance with</p>
+            <p>
+              We will be the one stop for buyers from the Middle East and the Business Incubation Center for sellers in Latin America connecting both
+              parties in a win-win relationship.
+            </p>
           </div>
           <div className="col-md-4">
             <FaHandshake size={60} />
             <h3 style={{ color: "#BC9B48", marginTop: "15px" }}>We find you supplier</h3>
-            <p>LatinAmerica Business Center was born as an initiative of the Arab Colombian Chamber of Commerce in alliance with</p>
+            <p>
+              Providing services and generating market penetration for Latin America companies, we have different companies looking to export their
+              products.
+            </p>
           </div>
         </div>
       </section>
-
       <section className={styles.recommendedProducts}>
         <h3>EXPLORE OUR CATEGORIES</h3>
         <hr style={{ width: "10%", border: "5px solid #BC9B48", opacity: "1", margin: 0, padding: 0, margin: "15px" }} />
         <p style={{ width: "50%", textAlign: "center", margin: "0px", padding: "0px" }}>
-          LatinAmerica Business Center was born as an initiative of the Arab Colombian Chamber of Commerce in alliancece in alliancece in alliancece
-          in alliance
+          We are the point of contact between buyers located in the MENA region and suppliers of Latin American products and services in all
+          industries
         </p>
         <HomeCarousell />
+      </section>
+      <section className={styles.recommendedProducts} style={{ marginTop: "50px" }}>
+        <h3>GET IN TOUCH WITH US</h3>
+        <hr style={{ width: "10%", border: "5px solid #BC9B48", opacity: "1", margin: 0, padding: 0, margin: "15px" }} />
+      </section>
+      <section className="container">
+        <form action="" onSubmit={submitHandler} ref={form}>
+          <div className="row g-3">
+            <div className="col-md-6">
+              <label htmlFor="inputEmail4" className="form-label">
+                Company Name
+              </label>
+              <input type="text" className="form-control" aria-label="First name" name="CompanyName" />
+            </div>
+            <div className="col-md-6">
+              <label htmlFor="inputEmail4" className="form-label">
+                Full Name
+              </label>
+              <input type="text" className="form-control" aria-label="First name" name="FullName" />
+            </div>
+            <div className="col-md-6">
+              <label htmlFor="inputEmail4" className="form-label">
+                Phone (Add Country Code)
+              </label>
+              <input type="text" className="form-control" aria-label="First name" name="Phone" />
+            </div>
+            <div className="col-md-6">
+              <label htmlFor="inputEmail4" className="form-label">
+                Email
+              </label>
+              <input type="text" className="form-control" aria-label="First name" name="Email" />
+            </div>
+            <div className="col-md-6">
+              <label htmlFor="inputEmail4" className="form-label">
+                Country
+              </label>
+              <input type="text" className="form-control" aria-label="First name" name="Country" />
+            </div>
+            <div className="col-md-6">
+              <label htmlFor="inputEmail4" className="form-label">
+                Industry/Sector
+              </label>
+              <input type="text" className="form-control" aria-label="First name" name="Industry" />
+            </div>
+            <div className="col-md-12">
+              <label htmlFor="inputEmail4" className="form-label">
+                Comments
+              </label>
+              <textarea
+                className="form-control"
+                placeholder="Add details: Quantity, Fob, Cif, message"
+                id="floatingTextarea"
+                rows={4}
+                name="Comments"
+              ></textarea>
+            </div>
+            <div className="col-12">
+              <button
+                type="submit"
+                className="btn"
+                style={{
+                  background: "#B9A46D",
+                  padding: "7px 15px",
+                  color: "white",
+                  border: "none",
+                  borderRadius: "10px",
+                  marginTop: "20px",
+                }}
+              >
+                Send Inquiry
+              </button>
+            </div>
+
+            {isSent && (
+              <div className="col-12">
+                <div className="alert alert-success d-flex align-items-center" role="alert">
+                  Success, your inquiry was sent!
+                </div>
+              </div>
+            )}
+          </div>
+        </form>
+      </section>
+      <section className="container my-5 text-center">
+        <h3 style={{ color: "#BC9B48" }}>Latinoamerica Business Center LLC</h3>
+        <h3 style={{ color: "white", fontSize: "18px" }}>Subsidiary of the Arab Colombian Chamber of Commerce</h3>
+        <p>
+          <FaMap /> KEZAD. AI Samha Abu Dhabi, United Arab Emirates
+        </p>
+        <p>
+          <FaWhatsapp /> <a href="https://wa.me/971502019016">+97 1 502 019016</a>
+        </p>
+        <p>
+          <FaEnvelope /> <a href="mailto:juliana.cabrejo@ccac.com.co">juliana.cabrejo@ccac.com.co</a>
+        </p>
+      </section>
+      <section style={{ position: "absolute ", top: "10px", right: "20px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+        <FaGlobe size={20} />
+        <a style={{ marginLeft: "10px", color: "#BC9B48", fontWeight: "500", letterSpacing: "1px", fontSize: "1.2em" }} href="https://labc.ae/buyers">
+          www.labc.ae
+        </a>
       </section>
     </div>
   );

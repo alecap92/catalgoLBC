@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Document() {
   return (
@@ -13,6 +14,9 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
+        <a href="https://api.whatsapp.com/send?phone=971502019016" class="float" target="_blank">
+          <FaWhatsapp />
+        </a>
       </body>
     </Html>
   );

@@ -41,8 +41,8 @@ const DetalleProducto = ({ product }) => {
   useEffect(() => {
     if (logged) {
       getCompaniesWithStock(product?.id)
-        .then(companies => setCompaniesWithStock(companies))
-        .catch(() => setCompaniesWithStock([]))
+        .then((companies) => setCompaniesWithStock(companies))
+        .catch(() => setCompaniesWithStock([]));
     }
   }, [logged, product?.id]);
 
@@ -53,10 +53,10 @@ const DetalleProducto = ({ product }) => {
         <h1 className="ms-3">{product?.name?.toUpperCase()}</h1>
       </div>
       {product ? (
-        <div className={ styles.informacionProducto }>
-          <img src={product.image} alt="" width="100%" style={{ maxWidth: "700px" }}/>
+        <div className={styles.informacionProducto}>
+          <img src={product.image} alt="" width="100%" style={{ maxWidth: "700px" }} />
 
-          <div className={ styles.informacionProductoPayload }>
+          <div className={styles.informacionProductoPayload}>
             <p>{product.description}</p>
             <button
               type="button"
@@ -141,6 +141,12 @@ const DetalleProducto = ({ product }) => {
                       Country
                     </label>
                     <input type="text" className="form-control" aria-label="First name" name="Country" />
+                  </div>
+                  <div className="col-md-6">
+                    <label htmlFor="inputEmail4" className="form-label">
+                      Industry/Sector
+                    </label>
+                    <input type="text" className="form-control" aria-label="First name" name="Industry" />
                   </div>
                   <div className="col-md-12">
                     <label htmlFor="inputEmail4" className="form-label">

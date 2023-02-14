@@ -123,10 +123,6 @@ const HomeCarousell = ({ forms, userInfo }) => {
       name: "towels",
       img: "/img/imgHome/30.png",
     },
-    {
-      name: "womenShapeware",
-      img: "/img/imgHome/31.png",
-    },
   ];
   let scrollAmount = 0;
 
