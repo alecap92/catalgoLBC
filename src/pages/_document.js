@@ -1,5 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaGlobe, FaWhatsapp } from "react-icons/fa";
 
 export default function Document() {
   return (
@@ -17,6 +17,15 @@ export default function Document() {
         <a href="https://api.whatsapp.com/send?phone=971502019016" class="float" target="_blank" rel="noreferrer">
           <FaWhatsapp />
         </a>
+        <section style={{ position: "absolute ", top: "10px", right: "30px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+          <FaGlobe size={20} />
+          <a
+            style={{ marginLeft: "10px", color: "#BC9B48", fontWeight: "500", letterSpacing: "1px", fontSize: "1.2em" }}
+            href="https://labc.ae/buyers"
+          >
+            www.labc.ae
+          </a>
+        </section>
       </body>
     </Html>
   );
