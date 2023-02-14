@@ -14,7 +14,7 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <a href="https://api.whatsapp.com/send?phone=971502019016" class="float" target="_blank">
+        <a href="https://api.whatsapp.com/send?phone=971502019016" class="float" target="_blank" rel="noreferrer">
           <FaWhatsapp />
         </a>
       </body>
