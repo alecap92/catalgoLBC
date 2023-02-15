@@ -2,10 +2,10 @@ export const SIDEBAR_CATEGORIES = [
   {
     label: "Food and Beverage",
     subCategories: [
-      {
-        label: "Bakery",
-        urlTag: "bakery",
-      },
+      // {
+      //   label: "Bakery",
+      //   urlTag: "bakery",
+      // },
       {
         label: "Chocolate & Cocoa",
         urlTag: "cocoa",
@@ -31,7 +31,7 @@ export const SIDEBAR_CATEGORIES = [
         urlTag: "flour&Mixes",
       },
       {
-        label: "Fresh Fruits",
+        label: "Fresh Fruits & Vegetables",
         urlTag: "freshFruits",
       },
       {
@@ -50,10 +50,10 @@ export const SIDEBAR_CATEGORIES = [
         label: "Sauces and Dressings",
         urlTag: "SaucesAndDressings",
       },
-      {
-        label: "Superfoods",
-        urlTag: "superfoods",
-      },
+      // {
+      //   label: "Superfoods",
+      //   urlTag: "superfoods",
+      // },
       {
         label: "Sugar cane & Tea",
         urlTag: "SugarCane&Tea",
@@ -68,7 +68,7 @@ export const SIDEBAR_CATEGORIES = [
         urlTag: "flowers",
       },
       {
-        label: "Rose Flowers",
+        label: "Roses",
         urlTag: "rosesflowers",
       },
     ],
@@ -76,14 +76,14 @@ export const SIDEBAR_CATEGORIES = [
   {
     label: "Beauty and Health",
     subCategories: [
-      {
-        label: "Bath and Shower",
-        urlTag: "BathAndShower",
-      },
-      {
-        label: "Body Care",
-        urlTag: "bodyCare",
-      },
+      // {
+      //   label: "Bath and Shower",
+      //   urlTag: "BathAndShower",
+      // },
+      // {
+      //   label: "Body Care",
+      //   urlTag: "bodyCare",
+      // },
       {
         label: "Facial Care",
         urlTag: "facialCare",
@@ -92,10 +92,10 @@ export const SIDEBAR_CATEGORIES = [
         label: "Hair Care",
         urlTag: "hairCare",
       },
-      {
-        label: "Aroma home",
-        urlTag: "aromaHome",
-      },
+      // {
+      //   label: "Aroma home",
+      //   urlTag: "aromaHome",
+      // },
     ],
   },
   {
@@ -118,18 +118,18 @@ export const SIDEBAR_CATEGORIES = [
         label: "Clothing",
         urlTag: "clothing",
       },
-      {
-        label: "Compression Girdle",
-        urlTag: "compressionGirdle",
-      },
+      // {
+      //   label: "Compression Girdle",
+      //   urlTag: "compressionGirdle",
+      // },
       {
         label: "Hats",
         urlTag: "hats",
       },
-      {
-        label: "Jewelery",
-        urlTag: "Jewelery",
-      },
+      // {
+      //   label: "Jewelery",
+      //   urlTag: "Jewelery",
+      // },
       {
         label: "Swimsuits",
         urlTag: "swimsuits",
@@ -138,10 +138,10 @@ export const SIDEBAR_CATEGORIES = [
         label: "Towels",
         urlTag: "towels",
       },
-      {
-        label: "Women Shapeware",
-        urlTag: "womenShapeware",
-      },
+      // {
+      //   label: "Women Shapeware",
+      //   urlTag: "womenShapeware",
+      // },
     ],
   },
 ];
