@@ -56,8 +56,8 @@ const HomePage = () => {
             <FaRegBuilding size={60} />
             <h3 style={{ color: "#BC9B48", marginTop: "15px" }}>Who we are</h3>
             <p style={{ marginBottom: "0px" }}>
-              We connect people, connect businesses. We provide clients in the Arab market with the confidence to carry out transactions with Latin
-              American companies.
+              We connect people, we connect businesses. We are the “one stop shop” where buyers in the region can reach direct suppliers of products
+              and services from Latin America.
             </p>
             <a href="https://labc.ae/buyers" style={{ margin: "0px", padding: "0px", color: "#BC9B48", cursor: "pointer" }}>
               Visit Us
@@ -67,17 +67,14 @@ const HomePage = () => {
             <FaGlobeAmericas size={60} />
             <h3 style={{ color: "#BC9B48", marginTop: "15px" }}>Voice of Millions</h3>
             <p>
-              We will be the one stop for buyers from the Middle East and the Business Incubation Center for sellers in Latin America connecting both
-              parties in a win-win relationship.
+              +3 million companies ready to export looking for new markets; we bring together the best of our Latin American region, selecting the
+              best products and availabilities, supporting the process from A to Z.
             </p>
           </div>
           <div className="col-md-4">
             <FaHandshake size={60} />
-            <h3 style={{ color: "#BC9B48", marginTop: "15px" }}>We find you supplier</h3>
-            <p>
-              Providing services and generating market penetration for Latin America companies, we have different companies looking to export their
-              products.
-            </p>
+            <h3 style={{ color: "#BC9B48", marginTop: "15px" }}>Our Value For You</h3>
+            <p>Higher profit for your business avoid intermediaries, confidence and convenience</p>
           </div>
         </div>
       </section>
