@@ -71,7 +71,7 @@ const DetalleProducto = ({ product }) => {
               data-bs-toggle="modal"
               data-bs-target="#exampleModal"
             >
-              Request Inquiry
+              Request Inquire
             </button>
           </div>
         </div>
@@ -173,14 +173,14 @@ const DetalleProducto = ({ product }) => {
                         marginTop: "20px",
                       }}
                     >
-                      Send Inquiry
+                      Send Inquire
                     </button>
                   </div>
 
                   {isSent && (
                     <div className="col-12">
                       <div className="alert alert-success d-flex align-items-center" role="alert">
-                        Success, your inquiry was sent!
+                        Success, your Inquire was sent!
                       </div>
                     </div>
                   )}
