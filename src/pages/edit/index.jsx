@@ -13,7 +13,7 @@ const Listado = () => {
   const router = useRouter();
 
   const getProducts = async () => {
-    const response = await fetch("https://www.ccacback.com/api/v1/products");
+    const response = await fetch("https://newccacnodemongodb-production.up.railway.app/api/v1/products");
     const data = await response.json();
 
     setListadoDeProductos(data.products);
@@ -22,7 +22,7 @@ const Listado = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     axios
-      .post("https://www.ccacback.com/api/v1/products", newProduct)
+      .post("https://newccacnodemongodb-production.up.railway.app/api/v1/products", newProduct)
       .then((res) => {
         Swal.fire("Exito!", "Ha sido creado exitosamente!", "success");
         console.log(res.data);
@@ -47,7 +47,7 @@ const Listado = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`https://www.ccacback.com/api/v1/products/${id}`)
+          .delete(`https://newccacnodemongodb-production.up.railway.app/api/v1/products/${id}`)
           .then((res) => {
             Swal.fire("Deleted!", "Your file has been deleted.", "success");
             getProducts();
@@ -64,9 +64,7 @@ const Listado = () => {
     if (e.target.value.length >= 3) {
       console.log(e.target.value);
 
-      const productosFiltrados = listadoDeProductos.filter((producto) =>
-        producto.name.toLowerCase().includes(e.target.value.toLowerCase())
-      );
+      const productosFiltrados = listadoDeProductos.filter((producto) => producto.name.toLowerCase().includes(e.target.value.toLowerCase()));
 
       setListadoDeProductos(productosFiltrados);
       console.log(newProduct);
@@ -89,23 +87,11 @@ const Listado = () => {
         <div className="container">
           <div className="row">
             <div className="col">
-              <button
-                type="button"
-                className="btn btn-success"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-              >
+              <button type="button" className="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Nuevo Producto
               </button>
               <div className="d-flex my-5">
-                <input
-                  type="text"
-                  name="search"
-                  id="search"
-                  placeholder="Buscar..."
-                  className="form-control"
-                  onChange={(e) => searchHandler(e)}
-                />
+                <input type="text" name="search" id="search" placeholder="Buscar..." className="form-control" onChange={(e) => searchHandler(e)} />
               </div>
               <table className="table table-striped table-dark table-hover">
                 <thead>
@@ -119,11 +105,7 @@ const Listado = () => {
                   {listadoDeProductos.map((item, index) => (
                     <tr key={index}>
                       <td>
-                        <img
-                          src={"https://catalgo.vercel.app" + item.image}
-                          alt=""
-                          style={{ width: "100px" }}
-                        />
+                        <img src={"https://catalgo.vercel.app" + item.image} alt="" style={{ width: "100px" }} />
                       </td>
                       <td>
                         <h5> {item.name}</h5>
@@ -147,25 +129,14 @@ const Listado = () => {
         </div>
       </div>
 
-      <div
-        className="modal fade"
-        id="exampleModal"
-        tabIndex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
+      <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog  modal-lg">
           <div className="modal-content">
             <div className="modal-header">
               <h1 className="modal-title fs-5 text-dark" id="exampleModalLabel">
                 Crear Nuevo Producto
               </h1>
-              <button
-                type="button"
-                className="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
+              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form action="" onSubmit={submitHandler}>
               <div className="modal-body text-dark">
@@ -285,11 +256,7 @@ const Listado = () => {
                 </div>
               </div>
               <div className="modal-footer">
-                <button
-                  type="button"
-                  className="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                >
+                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">
                   Cerrar
                 </button>
                 <button type="submit" className="btn btn-primary">

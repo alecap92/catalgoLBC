@@ -17,9 +17,7 @@ export default function Products({ products, category }) {
 }
 
 Products.getLayout = function getLayout(page) {
-  return (
-    <ProductsLayout title="LatinAmerica Business Center">{page}</ProductsLayout>
-  );
+  return <ProductsLayout title="LatinAmerica Business Center">{page}</ProductsLayout>;
 };
 
 export async function getStaticPaths() {
@@ -39,13 +37,11 @@ export async function getStaticProps({ params }) {
   let products = [];
 
   try {
-    const response = await fetch("https://www.ccacback.com/api/v1/products");
+    const response = await fetch("https://newccacnodemongodb-production.up.railway.app/api/v1/products");
     const data = await response.json();
 
     if (Array.isArray(data?.products)) {
-      products = data.products.filter(
-        (product) => product.category === params.category
-      );
+      products = data.products.filter((product) => product.category === params.category);
     }
   } catch (error) {
     console.log(error);
